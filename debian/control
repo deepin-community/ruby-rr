@@ -1,0 +1,26 @@
+Source: ruby-rr
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: TANIGUCHI Takaki <takaki@debian.org>,
+           Praveen Arimbrathodiyil <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb
+Standards-Version: 4.6.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-rr.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-rr
+Homepage: https://rr.github.com/rr
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+
+Package: ruby-rr
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${ruby:Depends},
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: test double framework for Ruby
+ RR (Double Ruby) is a double framework that features a rich selection of
+ double techniques and a terse syntax.
+ .
+ Double flamework is written in http://xunitpatterns.com/Test%20Double.html
